@@ -7,22 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EF6B4C129FF966C00E7F1C1 /* APIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C029FF966C00E7F1C1 /* APIApp.swift */; };
 		4EF6B4C329FF966C00E7F1C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C229FF966C00E7F1C1 /* ContentView.swift */; };
 		4EF6B4C529FF966F00E7F1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C429FF966F00E7F1C1 /* Assets.xcassets */; };
 		4EF6B4C829FF966F00E7F1C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C729FF966F00E7F1C1 /* Preview Assets.xcassets */; };
 		4EF6B4CA29FF966F00E7F1C1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C929FF966F00E7F1C1 /* Persistence.swift */; };
 		4EF6B4CD29FF966F00E7F1C1 /* API.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4CB29FF966F00E7F1C1 /* API.xcdatamodeld */; };
+		4EF6B4D929FFD12900E7F1C1 /* Teams Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4D829FFD12900E7F1C1 /* Teams Schema.swift */; };
+		4EF6B4DB29FFD13B00E7F1C1 /* League Tables Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4DA29FFD13B00E7F1C1 /* League Tables Schema.swift */; };
+		4EF6B4DD29FFD14B00E7F1C1 /* Players Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4DC29FFD14B00E7F1C1 /* Players Schema.swift */; };
+		4EF6B4DF29FFD15F00E7F1C1 /* Events Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4DE29FFD15F00E7F1C1 /* Events Schema.swift */; };
+		4EF6B4E229FFD86700E7F1C1 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4E129FFD86700E7F1C1 /* Teams.swift */; };
+		4EF6B4E42A00F91F00E7F1C1 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4E32A00F91F00E7F1C1 /* Events.swift */; };
+		4EF6B4E72A01049B00E7F1C1 /* TeamsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4E62A01049B00E7F1C1 /* TeamsAPICall.swift */; };
+		4EF6B4E92A0107B100E7F1C1 /* APIApp.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4E82A0107B100E7F1C1 /* APIApp.swift .swift */; };
+		4EF6B4EB2A010D8900E7F1C1 /* EventsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4EF6B4BD29FF966C00E7F1C1 /* API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4EF6B4C029FF966C00E7F1C1 /* APIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIApp.swift; sourceTree = "<group>"; };
 		4EF6B4C229FF966C00E7F1C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4EF6B4C429FF966F00E7F1C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EF6B4C729FF966F00E7F1C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4EF6B4C929FF966F00E7F1C1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4EF6B4CC29FF966F00E7F1C1 /* API.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = API.xcdatamodel; sourceTree = "<group>"; };
+		4EF6B4D829FFD12900E7F1C1 /* Teams Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Teams Schema.swift"; sourceTree = "<group>"; };
+		4EF6B4DA29FFD13B00E7F1C1 /* League Tables Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "League Tables Schema.swift"; sourceTree = "<group>"; };
+		4EF6B4DC29FFD14B00E7F1C1 /* Players Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Players Schema.swift"; sourceTree = "<group>"; };
+		4EF6B4DE29FFD15F00E7F1C1 /* Events Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Events Schema.swift"; sourceTree = "<group>"; };
+		4EF6B4E129FFD86700E7F1C1 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		4EF6B4E32A00F91F00E7F1C1 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		4EF6B4E62A01049B00E7F1C1 /* TeamsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsAPICall.swift; sourceTree = "<group>"; };
+		4EF6B4E82A0107B100E7F1C1 /* APIApp.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIApp.swift .swift"; sourceTree = "<group>"; };
+		4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPICall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +55,7 @@
 		4EF6B4B429FF966C00E7F1C1 = {
 			isa = PBXGroup;
 			children = (
+				4EF6B4E82A0107B100E7F1C1 /* APIApp.swift .swift */,
 				4EF6B4BF29FF966C00E7F1C1 /* API */,
 				4EF6B4BE29FF966C00E7F1C1 /* Products */,
 			);
@@ -55,7 +72,9 @@
 		4EF6B4BF29FF966C00E7F1C1 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				4EF6B4C029FF966C00E7F1C1 /* APIApp.swift */,
+				4EF6B4E52A01046D00E7F1C1 /* APICall */,
+				4EF6B4E029FFD85800E7F1C1 /* Views */,
+				4EF6B4D729FFD0F100E7F1C1 /* Models */,
 				4EF6B4C229FF966C00E7F1C1 /* ContentView.swift */,
 				4EF6B4C429FF966F00E7F1C1 /* Assets.xcassets */,
 				4EF6B4C929FF966F00E7F1C1 /* Persistence.swift */,
@@ -71,6 +90,35 @@
 				4EF6B4C729FF966F00E7F1C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4EF6B4D729FFD0F100E7F1C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6B4D829FFD12900E7F1C1 /* Teams Schema.swift */,
+				4EF6B4DA29FFD13B00E7F1C1 /* League Tables Schema.swift */,
+				4EF6B4DC29FFD14B00E7F1C1 /* Players Schema.swift */,
+				4EF6B4DE29FFD15F00E7F1C1 /* Events Schema.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4EF6B4E029FFD85800E7F1C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6B4E129FFD86700E7F1C1 /* Teams.swift */,
+				4EF6B4E32A00F91F00E7F1C1 /* Events.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4EF6B4E52A01046D00E7F1C1 /* APICall */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6B4E62A01049B00E7F1C1 /* TeamsAPICall.swift */,
+				4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */,
+			);
+			path = APICall;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +191,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF6B4E42A00F91F00E7F1C1 /* Events.swift in Sources */,
+				4EF6B4E92A0107B100E7F1C1 /* APIApp.swift .swift in Sources */,
 				4EF6B4CA29FF966F00E7F1C1 /* Persistence.swift in Sources */,
+				4EF6B4DF29FFD15F00E7F1C1 /* Events Schema.swift in Sources */,
 				4EF6B4C329FF966C00E7F1C1 /* ContentView.swift in Sources */,
+				4EF6B4E229FFD86700E7F1C1 /* Teams.swift in Sources */,
+				4EF6B4DD29FFD14B00E7F1C1 /* Players Schema.swift in Sources */,
+				4EF6B4EB2A010D8900E7F1C1 /* EventsAPICall.swift in Sources */,
+				4EF6B4DB29FFD13B00E7F1C1 /* League Tables Schema.swift in Sources */,
 				4EF6B4CD29FF966F00E7F1C1 /* API.xcdatamodeld in Sources */,
-				4EF6B4C129FF966C00E7F1C1 /* APIApp.swift in Sources */,
+				4EF6B4E72A01049B00E7F1C1 /* TeamsAPICall.swift in Sources */,
+				4EF6B4D929FFD12900E7F1C1 /* Teams Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
