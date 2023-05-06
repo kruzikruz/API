@@ -12,12 +12,16 @@ struct APIApp: App {
     
     @StateObject private var eventsapicall = EventsAPICall()
     @StateObject private var teamsapicall = TeamsAPICall()
+    @StateObject private var postsapicall = PostsAPICall()
+
     
     var body: some Scene {
-        WindowGroup {
-            TeamsView().environmentObject(teamsapicall)
-            EventsView().environmentObject(eventsapicall)
-        }
+            WindowGroup {
+                ContentView()
+                    .environmentObject(teamsapicall)
+                    .environmentObject(eventsapicall)
+                    .environmentObject(postsapicall)
+            }
         
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Events: Identifiable, Decodable {
-    var id: Int
+    let id: Int
     var title: Title
     var status: String
     var slug: String

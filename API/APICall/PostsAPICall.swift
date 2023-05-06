@@ -1,19 +1,19 @@
 //
-//  EventsAPICall.swift
+//  PostsAPICall.swift
 //  API
 //
-//  Created by Kornel Krużewski on 02/05/2023.
+//  Created by Kornel Krużewski on 06/05/2023.
 //
 
 import SwiftUI
 
-class EventsAPICall: ObservableObject {
-    @Published var events: [Events] = []
+class PostsAPICall: ObservableObject {
+    @Published var posts: [Posts] = []
     
     // MARK: - Events
     
-    func getEvents() {
-        guard let url = URL(string: "https://amatorkamp.pl/wp-json/sportspress/v2/events") else { fatalError("Missing URL") }
+    func getPosts() {
+        guard let url = URL(string: "https://amatorkamp.pl/wp-json/wp/v2/posts") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 
@@ -29,8 +29,8 @@ class EventsAPICall: ObservableObject {
                 guard let data = data else { return }
                 DispatchQueue.main.async {
                     do {
-                        let decodedEvents = try JSONDecoder().decode([Events].self, from: data)
-                        self.events = decodedEvents
+                        let decodedPosts = try JSONDecoder().decode([Posts].self, from: data)
+                        self.posts = decodedPosts
                     } catch let error {
                         print("Error decoding: ", error)
                     }
@@ -41,4 +41,5 @@ class EventsAPICall: ObservableObject {
         dataTask.resume()
     }
 }
+
 

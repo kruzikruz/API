@@ -8,24 +8,27 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @EnvironmentObject var teamsapicall: TeamsAPICall
+    @EnvironmentObject var eventsapicall: EventsAPICall
+    
     var body: some View {
         TabView {
             TeamsView()
                 .tabItem() {
                     Image(systemName: "soccerball.inverse")
-                    Text("Scores")
+                    Text("Mecze")
                 }
             EventsView()
                 .tabItem() {
                     Image(systemName: "star")
-                    Text("Favourites")
+                    Text("Ulubione")
                 }
-            EventsView()
+            ContentView2()
                 .tabItem() {
-                    Image(systemName: "camera.viewfinder")
-                    Text("Watch")
+                    Image(systemName: "tablecells")
+                    Text("Tabela")
                 }
-            EventsView()
+            News()
                 .tabItem() {
                     Image(systemName: "newspaper.fill")
                     Text("News")
@@ -33,9 +36,11 @@ struct ContentView: View {
             EventsView()
                 .tabItem() {
                     Image(systemName: "arrow.clockwise")
-                    Text("Refresh")
+                    Text("Odśwież")
                 }
         }
+        .accentColor(.orange)
+        
     }
 
 }
@@ -43,5 +48,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(TeamsAPICall())
+            .environmentObject(EventsAPICall())
+        
     }
 }
