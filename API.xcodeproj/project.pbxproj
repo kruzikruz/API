@@ -27,7 +27,6 @@
 		4EF6B4EB2A010D8900E7F1C1 /* EventsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */; };
 		4EF6B4ED2A019BBC00E7F1C1 /* DetailEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4EC2A019BBC00E7F1C1 /* DetailEvents.swift */; };
 		4EF6B4EF2A02666D00E7F1C1 /* EventsTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4EE2A02666D00E7F1C1 /* EventsTEST.swift */; };
-		4EF6B4F12A026DA100E7F1C1 /* GTPTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4F02A026DA100E7F1C1 /* GTPTEST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPICall.swift; sourceTree = "<group>"; };
 		4EF6B4EC2A019BBC00E7F1C1 /* DetailEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEvents.swift; sourceTree = "<group>"; };
 		4EF6B4EE2A02666D00E7F1C1 /* EventsTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTEST.swift; sourceTree = "<group>"; };
-		4EF6B4F02A026DA100E7F1C1 /* GTPTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTPTEST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +123,6 @@
 				4EF6B4E32A00F91F00E7F1C1 /* Events.swift */,
 				4EF6B4EC2A019BBC00E7F1C1 /* DetailEvents.swift */,
 				4EF6B4EE2A02666D00E7F1C1 /* EventsTEST.swift */,
-				4EF6B4F02A026DA100E7F1C1 /* GTPTEST.swift */,
 				4E21B55C2A0440C400F243A5 /* News.swift */,
 				4E21B5662A06A74900F243A5 /* NewsDetail.swift */,
 			);
@@ -229,7 +226,6 @@
 				4E21B5652A0684E400F243A5 /* Posts Schema.swift in Sources */,
 				4EF6B4ED2A019BBC00E7F1C1 /* DetailEvents.swift in Sources */,
 				4EF6B4E72A01049B00E7F1C1 /* TeamsAPICall.swift in Sources */,
-				4EF6B4F12A026DA100E7F1C1 /* GTPTEST.swift in Sources */,
 				4EF6B4D929FFD12900E7F1C1 /* Teams Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
