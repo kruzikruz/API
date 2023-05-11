@@ -40,9 +40,17 @@ struct ContentView: View {
                 }
         }
         .accentColor(.orange)
-        
+        .onAppear {
+            let appearance = UITabBarAppearance()
+            appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+            appearance.backgroundColor = UIColor(Color.black.opacity(0.9))
+            
+            // Use this appearance when scrolling behind the TabView:
+            //UITabBar.appearance().standardAppearance = appearance
+            // Use this appearance when scrolled all the way up:
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -50,6 +58,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .environmentObject(TeamsAPICall())
             .environmentObject(EventsAPICall())
-        
+            .environmentObject(PostsAPICall())
+
     }
 }

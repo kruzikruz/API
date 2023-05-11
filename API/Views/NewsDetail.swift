@@ -88,6 +88,11 @@ struct NewsDetail: View {
         
     }
 }
+
+
+
+
+
 struct NewsDetail_Previews: PreviewProvider {
     static var previews: some View {
         NewsDetail( name: "TEST").environmentObject(PostsAPICall())

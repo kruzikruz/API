@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+///Headline Type
+var EMPTY_IMAGE_URL = "https://seferihisar.com/wp-content/themes/shnews/assets/img/no-thumb.jpg"
+
+
 @main
 struct APIApp: App {
     
@@ -24,5 +28,10 @@ struct APIApp: App {
             }
         
     }
+    
+    
+    
+    
+    
 }
 
