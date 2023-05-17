@@ -39,7 +39,7 @@ struct ContentView: View {
                     Text("Odśwież")
                 }
         }
-        .accentColor(.orange)
+        .accentColor(.green)
         .onAppear {
             let appearance = UITabBarAppearance()
             appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)

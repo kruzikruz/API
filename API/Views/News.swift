@@ -4,50 +4,48 @@
 //
 //  Created by Kornel Krużewski on 04/05/2023.
 //
-
-struct NavigationBar: View {
-  
-  var body: some View {
-    VStack {
-      HStack {
-        Text("News")
-          .font(.title)
-          .foregroundColor(.white)
-        Spacer()
-        HStack(
-          spacing: 16
-        ) {
-          Button {
-            //action
-          } label: {
-            Image(systemName: "magnifyingglass")
-          }
-          .tint(.white)
-          .frame(width: 24, height: 24)
-          Button {
-            //action
-          } label: {
-            Image(systemName: "line.3.horizontal")
-          }
-          .tint(.white)
-          .frame(width: 24, height: 24)
-        }
-      }
-      .padding([.leading, .trailing], 12)
-      Divider()
-        .ignoresSafeArea()
-        .overlay(.white)
-    }
-  }
-}
-
-
 import SwiftUI
 import Kingfisher
 
+struct NavigationBar: View {
+        
+    var body: some View {
+        VStack {
+            HStack {
+                Text("News")
+                    .font(.title)
+                    .foregroundColor(.white)
+                Spacer()
+                HStack(
+                    spacing: 16
+                ) {
+                    Button {
+                        //action
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                    }
+                    .tint(.white)
+                    .frame(width: 24, height: 24)
+                    Button {
+                        //action
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                    }
+                    .tint(.white)
+                    .frame(width: 24, height: 24)
+                }
+            }
+            .padding([.leading, .trailing], 12)
+            Divider()
+                .ignoresSafeArea()
+                .overlay(.white)
+        }
+    }
+}
+
 struct News: View {
     
-    @EnvironmentObject var postsapicall: PostsAPICall
+    @StateObject var postsapicall = PostsAPICall()
     
     var body: some View {
         NavigationView{
@@ -58,14 +56,14 @@ struct News: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(postsapicall.posts, id: \.id) { posts in // Replace with your data model here
-                                    NavigationLink(destination: NewsDetail(name: posts.title.rendered)) {
+                                    NavigationLink(destination: NewsDetail(post: posts)) {
                                         HStack{
                                             KFImage(URL(string: (posts.jetpack_featured_media_url )) ?? URL(string: EMPTY_IMAGE_URL)!)
-                                            //.scaledToFill()
-                                            //.renderingMode(.original)
+                                                //.scaledToFill()
+                                                //.renderingMode(.original)
                                                 .resizable()
-                                                .aspectRatio(contentMode: .fit)
-                                                .frame(maxWidth: 190, maxHeight: 129)
+                                                //.scaledToFill()
+                                                .frame(width: 200, height: 120)
                                                 .clipped()
                                                 .mask { RoundedRectangle(cornerRadius: 0, style: .continuous) }
                                                 .overlay {
@@ -106,12 +104,13 @@ struct News: View {
                             VStack {
                                 VStack {
                                     ForEach(postsapicall.posts, id: \.id) { posts in // Replace with your data model here
-                                        NavigationLink(destination: NewsDetail(name: posts.title.rendered)) {
+                                        NavigationLink(destination: NewsDetail(post: posts)) {
                                             HStack {
                                                 KFImage(URL(string: (posts.jetpack_featured_media_url )) ?? URL(string: EMPTY_IMAGE_URL)!)
                                                     .resizable()
-                                                    .scaledToFill()
-                                                    .frame(width: 150, height: 65)
+                                                    //.scaledToFill()
+                                                    .frame(width: 150, height: 90)
+                                                    //.scaledToFill()
                                                     //.cornerRadius(35)
                                                 VStack {
                                                     Text(posts.title.rendered)

@@ -12,6 +12,19 @@
 		4E21B5652A0684E400F243A5 /* Posts Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21B5642A0684E400F243A5 /* Posts Schema.swift */; };
 		4E21B5672A06A74900F243A5 /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21B5662A06A74900F243A5 /* NewsDetail.swift */; };
 		4ECEF1FD2A0C06E10077D9C9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF1FC2A0C06E10077D9C9 /* Kingfisher */; };
+		4ECEF1FF2A115FB30077D9C9 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEF1FE2A115FB30077D9C9 /* SideMenu.swift */; };
+		4ECEF2022A12AEC40077D9C9 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF2012A12AEC40077D9C9 /* Stripe */; };
+		4ECEF2042A12AEC40077D9C9 /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF2032A12AEC40077D9C9 /* StripeApplePay */; };
+		4ECEF2062A12AEC40077D9C9 /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF2052A12AEC40077D9C9 /* StripeCardScan */; };
+		4ECEF2082A12AEC40077D9C9 /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF2072A12AEC40077D9C9 /* StripeFinancialConnections */; };
+		4ECEF20A2A12AEC40077D9C9 /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF2092A12AEC40077D9C9 /* StripeIdentity */; };
+		4ECEF20C2A12AEC40077D9C9 /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF20B2A12AEC40077D9C9 /* StripePaymentSheet */; };
+		4ECEF20E2A12AEC40077D9C9 /* StripePayments in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF20D2A12AEC40077D9C9 /* StripePayments */; };
+		4ECEF2102A12AEC40077D9C9 /* StripePaymentsUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF20F2A12AEC40077D9C9 /* StripePaymentsUI */; };
+		4ECEF2132A12B3550077D9C9 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF2122A12B3550077D9C9 /* Lottie */; };
+		4ECEF2162A12B3720077D9C9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEF2152A12B3720077D9C9 /* CardView.swift */; };
+		4ECEF21A2A12B3C30077D9C9 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEF2192A12B3C30077D9C9 /* Card.swift */; };
+		4ECEF21D2A1542FA0077D9C9 /* Author Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEF21C2A1542FA0077D9C9 /* Author Schema.swift */; };
 		4EF6B4C329FF966C00E7F1C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C229FF966C00E7F1C1 /* ContentView.swift */; };
 		4EF6B4C529FF966F00E7F1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C429FF966F00E7F1C1 /* Assets.xcassets */; };
 		4EF6B4C829FF966F00E7F1C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF6B4C729FF966F00E7F1C1 /* Preview Assets.xcassets */; };
@@ -35,6 +48,11 @@
 		4E21B5622A06843800F243A5 /* PostsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPICall.swift; sourceTree = "<group>"; };
 		4E21B5642A0684E400F243A5 /* Posts Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Posts Schema.swift"; sourceTree = "<group>"; };
 		4E21B5662A06A74900F243A5 /* NewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
+		4ECEF1FE2A115FB30077D9C9 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		4ECEF2152A12B3720077D9C9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4ECEF2192A12B3C30077D9C9 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		4ECEF21B2A14219A0077D9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4ECEF21C2A1542FA0077D9C9 /* Author Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author Schema.swift"; sourceTree = "<group>"; };
 		4EF6B4BD29FF966C00E7F1C1 /* API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF6B4C229FF966C00E7F1C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4EF6B4C429FF966F00E7F1C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,16 +77,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECEF2082A12AEC40077D9C9 /* StripeFinancialConnections in Frameworks */,
+				4ECEF2062A12AEC40077D9C9 /* StripeCardScan in Frameworks */,
+				4ECEF2042A12AEC40077D9C9 /* StripeApplePay in Frameworks */,
+				4ECEF20A2A12AEC40077D9C9 /* StripeIdentity in Frameworks */,
+				4ECEF20C2A12AEC40077D9C9 /* StripePaymentSheet in Frameworks */,
+				4ECEF2132A12B3550077D9C9 /* Lottie in Frameworks */,
 				4ECEF1FD2A0C06E10077D9C9 /* Kingfisher in Frameworks */,
+				4ECEF2102A12AEC40077D9C9 /* StripePaymentsUI in Frameworks */,
+				4ECEF20E2A12AEC40077D9C9 /* StripePayments in Frameworks */,
+				4ECEF2022A12AEC40077D9C9 /* Stripe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ECEF2142A12B3650077D9C9 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4ECEF2152A12B3720077D9C9 /* CardView.swift */,
+				4ECEF2192A12B3C30077D9C9 /* Card.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		4EF6B4B429FF966C00E7F1C1 = {
 			isa = PBXGroup;
 			children = (
+				4ECEF2142A12B3650077D9C9 /* Onboarding */,
 				4EF6B4E82A0107B100E7F1C1 /* APIApp.swift .swift */,
 				4EF6B4C229FF966C00E7F1C1 /* ContentView.swift */,
 				4EF6B4BF29FF966C00E7F1C1 /* API */,
@@ -87,6 +124,7 @@
 		4EF6B4BF29FF966C00E7F1C1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4ECEF21B2A14219A0077D9C9 /* Info.plist */,
 				4EF6B4E52A01046D00E7F1C1 /* APICall */,
 				4EF6B4E029FFD85800E7F1C1 /* Views */,
 				4EF6B4D729FFD0F100E7F1C1 /* Models */,
@@ -114,6 +152,7 @@
 				4EF6B4DC29FFD14B00E7F1C1 /* Players Schema.swift */,
 				4EF6B4DE29FFD15F00E7F1C1 /* Events Schema.swift */,
 				4E21B5642A0684E400F243A5 /* Posts Schema.swift */,
+				4ECEF21C2A1542FA0077D9C9 /* Author Schema.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -127,6 +166,7 @@
 				4EF6B4EE2A02666D00E7F1C1 /* EventsTEST.swift */,
 				4E21B55C2A0440C400F243A5 /* News.swift */,
 				4E21B5662A06A74900F243A5 /* NewsDetail.swift */,
+				4ECEF1FE2A115FB30077D9C9 /* SideMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +199,15 @@
 			name = API;
 			packageProductDependencies = (
 				4ECEF1FC2A0C06E10077D9C9 /* Kingfisher */,
+				4ECEF2012A12AEC40077D9C9 /* Stripe */,
+				4ECEF2032A12AEC40077D9C9 /* StripeApplePay */,
+				4ECEF2052A12AEC40077D9C9 /* StripeCardScan */,
+				4ECEF2072A12AEC40077D9C9 /* StripeFinancialConnections */,
+				4ECEF2092A12AEC40077D9C9 /* StripeIdentity */,
+				4ECEF20B2A12AEC40077D9C9 /* StripePaymentSheet */,
+				4ECEF20D2A12AEC40077D9C9 /* StripePayments */,
+				4ECEF20F2A12AEC40077D9C9 /* StripePaymentsUI */,
+				4ECEF2122A12B3550077D9C9 /* Lottie */,
 			);
 			productName = API;
 			productReference = 4EF6B4BD29FF966C00E7F1C1 /* API.app */;
@@ -190,6 +239,8 @@
 			mainGroup = 4EF6B4B429FF966C00E7F1C1;
 			packageReferences = (
 				4ECEF1FB2A0C06E10077D9C9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
+				4ECEF2112A12B3540077D9C9 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 4EF6B4BE29FF966C00E7F1C1 /* Products */;
 			projectDirPath = "";
@@ -227,14 +278,18 @@
 				4EF6B4C329FF966C00E7F1C1 /* ContentView.swift in Sources */,
 				4EF6B4E229FFD86700E7F1C1 /* Teams.swift in Sources */,
 				4E21B5672A06A74900F243A5 /* NewsDetail.swift in Sources */,
+				4ECEF21D2A1542FA0077D9C9 /* Author Schema.swift in Sources */,
 				4EF6B4DD29FFD14B00E7F1C1 /* Players Schema.swift in Sources */,
 				4EF6B4EB2A010D8900E7F1C1 /* EventsAPICall.swift in Sources */,
 				4EF6B4DB29FFD13B00E7F1C1 /* League Tables Schema.swift in Sources */,
 				4EF6B4CD29FF966F00E7F1C1 /* API.xcdatamodeld in Sources */,
+				4ECEF2162A12B3720077D9C9 /* CardView.swift in Sources */,
 				4E21B5652A0684E400F243A5 /* Posts Schema.swift in Sources */,
+				4ECEF1FF2A115FB30077D9C9 /* SideMenu.swift in Sources */,
 				4EF6B4ED2A019BBC00E7F1C1 /* DetailEvents.swift in Sources */,
 				4EF6B4E72A01049B00E7F1C1 /* TeamsAPICall.swift in Sources */,
 				4EF6B4D929FFD12900E7F1C1 /* Teams Schema.swift in Sources */,
+				4ECEF21A2A12B3C30077D9C9 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,9 +418,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"API/Preview Content\"";
-				DEVELOPMENT_TEAM = 9FWDXRAC2C;
+				DEVELOPMENT_TEAM = 2MTVPQ75PS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = API/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App requires access to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -375,8 +432,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Kornel.Kruzewski.API;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amatorkamp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -392,9 +449,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"API/Preview Content\"";
-				DEVELOPMENT_TEAM = 9FWDXRAC2C;
+				DEVELOPMENT_TEAM = 2MTVPQ75PS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = API/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "App requires access to your camera to allow you to take a photo of your ID to process your request";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,8 +463,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Kornel.Kruzewski.API;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amatorkamp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -445,6 +504,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
+		4ECEF2112A12B3540077D9C9 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -452,6 +527,51 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4ECEF1FB2A0C06E10077D9C9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		4ECEF2012A12AEC40077D9C9 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = Stripe;
+		};
+		4ECEF2032A12AEC40077D9C9 /* StripeApplePay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeApplePay;
+		};
+		4ECEF2052A12AEC40077D9C9 /* StripeCardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeCardScan;
+		};
+		4ECEF2072A12AEC40077D9C9 /* StripeFinancialConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeFinancialConnections;
+		};
+		4ECEF2092A12AEC40077D9C9 /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripeIdentity;
+		};
+		4ECEF20B2A12AEC40077D9C9 /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePaymentSheet;
+		};
+		4ECEF20D2A12AEC40077D9C9 /* StripePayments */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePayments;
+		};
+		4ECEF20F2A12AEC40077D9C9 /* StripePaymentsUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2002A12AEC40077D9C9 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */;
+			productName = StripePaymentsUI;
+		};
+		4ECEF2122A12B3550077D9C9 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4ECEF2112A12B3540077D9C9 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 
