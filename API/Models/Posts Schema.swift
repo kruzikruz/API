@@ -11,6 +11,7 @@ struct Posts: Codable, Identifiable {
     let id: Int
     let date: String
     let title: Rendered
+    let author: Int
     let content: Rendered
     let excerpt: Rendered
     //    let jetpack_featured_media_url: String?
@@ -19,7 +20,7 @@ struct Posts: Codable, Identifiable {
     var _embedded:Embedded?
     
     static var `default` : Posts {
-        Posts(id: 0, date: "2020-12-18T16:45:09", title: Rendered(rendered: ""), content: Rendered(rendered: ""), excerpt: Rendered(rendered: ""), link: "", jetpack_featured_media_url: "")
+        Posts(id: 0, date: "2022-12-18T16:45:09", title: Rendered(rendered: ""), author: 1, content: Rendered(rendered: ""), excerpt: Rendered(rendered: ""), link: "", jetpack_featured_media_url: "")
     }
     
     //    required init(from decoder: Decoder) throws {

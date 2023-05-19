@@ -11,6 +11,9 @@
 		4E21B5632A06843800F243A5 /* PostsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21B5622A06843800F243A5 /* PostsAPICall.swift */; };
 		4E21B5652A0684E400F243A5 /* Posts Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21B5642A0684E400F243A5 /* Posts Schema.swift */; };
 		4E21B5672A06A74900F243A5 /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E21B5662A06A74900F243A5 /* NewsDetail.swift */; };
+		4EB684D42A16C78200080EAE /* TableAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB684D32A16C78200080EAE /* TableAPICall.swift */; };
+		4EB684D62A16C83000080EAE /* Table Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB684D52A16C83000080EAE /* Table Schema.swift */; };
+		4EB684D82A16C8EA00080EAE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB684D72A16C8EA00080EAE /* Table.swift */; };
 		4ECEF1FD2A0C06E10077D9C9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF1FC2A0C06E10077D9C9 /* Kingfisher */; };
 		4ECEF1FF2A115FB30077D9C9 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECEF1FE2A115FB30077D9C9 /* SideMenu.swift */; };
 		4ECEF2022A12AEC40077D9C9 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 4ECEF2012A12AEC40077D9C9 /* Stripe */; };
@@ -40,7 +43,6 @@
 		4EF6B4E92A0107B100E7F1C1 /* APIApp.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4E82A0107B100E7F1C1 /* APIApp.swift .swift */; };
 		4EF6B4EB2A010D8900E7F1C1 /* EventsAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */; };
 		4EF6B4ED2A019BBC00E7F1C1 /* DetailEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4EC2A019BBC00E7F1C1 /* DetailEvents.swift */; };
-		4EF6B4EF2A02666D00E7F1C1 /* EventsTEST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6B4EE2A02666D00E7F1C1 /* EventsTEST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,9 @@
 		4E21B5622A06843800F243A5 /* PostsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPICall.swift; sourceTree = "<group>"; };
 		4E21B5642A0684E400F243A5 /* Posts Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Posts Schema.swift"; sourceTree = "<group>"; };
 		4E21B5662A06A74900F243A5 /* NewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetail.swift; sourceTree = "<group>"; };
+		4EB684D32A16C78200080EAE /* TableAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableAPICall.swift; sourceTree = "<group>"; };
+		4EB684D52A16C83000080EAE /* Table Schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Table Schema.swift"; sourceTree = "<group>"; };
+		4EB684D72A16C8EA00080EAE /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 		4ECEF1FE2A115FB30077D9C9 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		4ECEF2152A12B3720077D9C9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4ECEF2192A12B3C30077D9C9 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -69,7 +74,6 @@
 		4EF6B4E82A0107B100E7F1C1 /* APIApp.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIApp.swift .swift"; sourceTree = "<group>"; };
 		4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPICall.swift; sourceTree = "<group>"; };
 		4EF6B4EC2A019BBC00E7F1C1 /* DetailEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEvents.swift; sourceTree = "<group>"; };
-		4EF6B4EE2A02666D00E7F1C1 /* EventsTEST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTEST.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 				4EF6B4DE29FFD15F00E7F1C1 /* Events Schema.swift */,
 				4E21B5642A0684E400F243A5 /* Posts Schema.swift */,
 				4ECEF21C2A1542FA0077D9C9 /* Author Schema.swift */,
+				4EB684D52A16C83000080EAE /* Table Schema.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,10 +168,10 @@
 				4EF6B4E129FFD86700E7F1C1 /* Teams.swift */,
 				4EF6B4E32A00F91F00E7F1C1 /* Events.swift */,
 				4EF6B4EC2A019BBC00E7F1C1 /* DetailEvents.swift */,
-				4EF6B4EE2A02666D00E7F1C1 /* EventsTEST.swift */,
 				4E21B55C2A0440C400F243A5 /* News.swift */,
 				4E21B5662A06A74900F243A5 /* NewsDetail.swift */,
 				4ECEF1FE2A115FB30077D9C9 /* SideMenu.swift */,
+				4EB684D72A16C8EA00080EAE /* Table.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				4EF6B4E62A01049B00E7F1C1 /* TeamsAPICall.swift */,
 				4EF6B4EA2A010D8900E7F1C1 /* EventsAPICall.swift */,
 				4E21B5622A06843800F243A5 /* PostsAPICall.swift */,
+				4EB684D32A16C78200080EAE /* TableAPICall.swift */,
 			);
 			path = APICall;
 			sourceTree = "<group>";
@@ -269,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E21B5632A06843800F243A5 /* PostsAPICall.swift in Sources */,
-				4EF6B4EF2A02666D00E7F1C1 /* EventsTEST.swift in Sources */,
 				4EF6B4E42A00F91F00E7F1C1 /* Events.swift in Sources */,
 				4E21B55D2A0440C400F243A5 /* News.swift in Sources */,
 				4EF6B4E92A0107B100E7F1C1 /* APIApp.swift .swift in Sources */,
@@ -279,14 +284,17 @@
 				4EF6B4E229FFD86700E7F1C1 /* Teams.swift in Sources */,
 				4E21B5672A06A74900F243A5 /* NewsDetail.swift in Sources */,
 				4ECEF21D2A1542FA0077D9C9 /* Author Schema.swift in Sources */,
+				4EB684D42A16C78200080EAE /* TableAPICall.swift in Sources */,
 				4EF6B4DD29FFD14B00E7F1C1 /* Players Schema.swift in Sources */,
 				4EF6B4EB2A010D8900E7F1C1 /* EventsAPICall.swift in Sources */,
 				4EF6B4DB29FFD13B00E7F1C1 /* League Tables Schema.swift in Sources */,
+				4EB684D62A16C83000080EAE /* Table Schema.swift in Sources */,
 				4EF6B4CD29FF966F00E7F1C1 /* API.xcdatamodeld in Sources */,
 				4ECEF2162A12B3720077D9C9 /* CardView.swift in Sources */,
 				4E21B5652A0684E400F243A5 /* Posts Schema.swift in Sources */,
 				4ECEF1FF2A115FB30077D9C9 /* SideMenu.swift in Sources */,
 				4EF6B4ED2A019BBC00E7F1C1 /* DetailEvents.swift in Sources */,
+				4EB684D82A16C8EA00080EAE /* Table.swift in Sources */,
 				4EF6B4E72A01049B00E7F1C1 /* TeamsAPICall.swift in Sources */,
 				4EF6B4D929FFD12900E7F1C1 /* Teams Schema.swift in Sources */,
 				4ECEF21A2A12B3C30077D9C9 /* Card.swift in Sources */,
@@ -416,7 +424,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"API/Preview Content\"";
 				DEVELOPMENT_TEAM = 2MTVPQ75PS;
 				ENABLE_PREVIEWS = YES;
@@ -432,7 +440,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amatorkamp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -447,7 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"API/Preview Content\"";
 				DEVELOPMENT_TEAM = 2MTVPQ75PS;
 				ENABLE_PREVIEWS = YES;
@@ -463,7 +471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amatorkamp.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

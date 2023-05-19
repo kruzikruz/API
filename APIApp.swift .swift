@@ -17,7 +17,7 @@ struct APIApp: App {
     @StateObject private var eventsapicall = EventsAPICall()
     @StateObject private var teamsapicall = TeamsAPICall()
     @StateObject private var postsapicall = PostsAPICall()
-
+    @StateObject private var tableapicall = TableAPICall()
     
     var body: some Scene {
             WindowGroup {
@@ -25,6 +25,7 @@ struct APIApp: App {
                     .environmentObject(teamsapicall)
                     .environmentObject(eventsapicall)
                     .environmentObject(postsapicall)
+                    .environmentObject(tableapicall)
             }
         
     }

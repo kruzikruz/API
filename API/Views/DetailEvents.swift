@@ -9,16 +9,19 @@ import SwiftUI
 
 struct DetailEvents: View {
     
-    let name: String
+    let event: Events
+    @EnvironmentObject var eventsapicall: EventsAPICall
+    
     
     var body: some View {
-            Text(name)
+            Text("name")
                 .font(.largeTitle)
         }
     
 }
 struct DetailEvents_Previews: PreviewProvider {
     static var previews: some View {
-        DetailEvents(name: "Amatorka Mikołajki Pomorskie")
+        DetailEvents(event: Events.default).environmentObject(EventsAPICall())
     }
 }
+

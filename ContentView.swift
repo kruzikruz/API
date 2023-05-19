@@ -10,10 +10,11 @@ struct ContentView: View {
 
     @EnvironmentObject var teamsapicall: TeamsAPICall
     @EnvironmentObject var eventsapicall: EventsAPICall
+    @EnvironmentObject var tableapicall: TableAPICall
     
     var body: some View {
         TabView {
-            TeamsView()
+            EventsView()
                 .tabItem() {
                     Image(systemName: "soccerball.inverse")
                     Text("Mecze")
@@ -23,7 +24,7 @@ struct ContentView: View {
                     Image(systemName: "star")
                     Text("Ulubione")
                 }
-            ContentView2()
+            TableView()
                 .tabItem() {
                     Image(systemName: "tablecells")
                     Text("Tabela")
@@ -59,6 +60,7 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(TeamsAPICall())
             .environmentObject(EventsAPICall())
             .environmentObject(PostsAPICall())
+            .environmentObject(TableAPICall())
 
     }
 }
