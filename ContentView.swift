@@ -40,6 +40,7 @@ struct ContentView: View {
                     Text("Odśwież")
                 }
         }
+        
         .accentColor(.green)
         .onAppear {
             let appearance = UITabBarAppearance()

@@ -14,6 +14,6 @@ struct Teams: Identifiable, Decodable {
     var link: String
     var template: String
     var abbreviation: String
-    var url: String
+    var slug: String
 }
 
