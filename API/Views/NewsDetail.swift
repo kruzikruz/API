@@ -11,7 +11,6 @@ import Kingfisher
 
 struct NewsDetail: View {
     let post: Posts
-    
     @State private var userData: UserData?
     
     @Environment(\.dismiss) private var dismiss
@@ -53,11 +52,11 @@ struct NewsDetail: View {
                             .frame(alignment: .leading)
                             .clipped()
                             VStack {
-                                Text(post.date)
+                                Text(formatDate(post.date))
                                     .frame(maxWidth: .infinity, alignment: .trailing)
                                     .clipped()
                                     .font(.system(size: 12, weight: .heavy, design: .default))
-                                Text(post.date)
+                                Text(formatTime(post.date))
                                     .frame(maxWidth: .infinity, alignment: .trailing)
                                     .clipped()
                                     .font(.system(size: 8, weight: .heavy, design: .default))
@@ -119,7 +118,29 @@ struct NewsDetail: View {
     }
     }
 
+func formatDate(_ dateString: String) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    
+    if let date = dateFormatter.date(from: dateString) {
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: date)
+    } else {
+        return "Invalid Date"
+    }
+}
 
+func formatTime(_ dateString: String) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    
+    if let date = dateFormatter.date(from: dateString) {
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: date)
+    } else {
+        return "Invalid Time"
+    }
+}
 
 
 struct NewsDetail_Previews: PreviewProvider {

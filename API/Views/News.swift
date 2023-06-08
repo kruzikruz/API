@@ -115,6 +115,7 @@ struct News: View {
                                                 VStack {
                                                     Text(posts.title.rendered)
                                                         .foregroundColor(.white)
+                                                        .multilineTextAlignment(.leading)
                                                     HStack(alignment: .bottom) {
                                                         Text("Hello, World!")
                                                             .background {
@@ -122,7 +123,7 @@ struct News: View {
                                                                     .fill(Color(.systemFill))
                                                             }
                                                             .font(.system(size: 8, weight: .regular, design: .default))
-                                                        Text(posts.date)
+                                                        Text(formatDate(posts.date))
                                                             .font(.system(size: 8, weight: .regular, design: .default))
                                                     }
                                                     .frame(maxWidth: .infinity, alignment: .bottom)
