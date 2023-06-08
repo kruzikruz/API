@@ -14,7 +14,7 @@ struct DetailEvents: View {
     
     
     var body: some View {
-            Text("name")
+            Text(event.day)
                 .font(.largeTitle)
         }
     

@@ -1,4 +1,6 @@
 import SwiftUI
+import Kingfisher
+
 
 struct NavigationBar2: View {
     var body: some View {
@@ -36,6 +38,8 @@ struct NavigationBar2: View {
 struct EventsView: View {
     @EnvironmentObject var eventsAPICall: EventsAPICall
     @Environment(\.colorScheme) var colorScheme
+    @State private var teamNames: [Int: String] = [:] // Zaktualizowana tablica przechowująca nazwy zespołów
+    @State private var teamLogos: [Int: URL] = [:] // Zaktualizowana tablica przechowująca adresy URL logotypów zespołów
     
     var body: some View {
         NavigationView {
@@ -57,13 +61,13 @@ struct EventsView: View {
                                             .padding(5)
                                             VStack(alignment: .trailing) {
                                                 HStack(spacing: 4) {
-                                                    Image("myImage")
-                                                        .renderingMode(.original)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(height: 20)
-                                                        .clipped()
-                                                    Text("TEST")
+                                                    if let logoURL = teamLogos[event.teams[0]] {
+                                                        KFImage(logoURL)
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .frame(width: 22, height: 22)
+                                                    }
+                                                    Text(getTeamName(for: event.teams[0])) // Użyj pierwszego identyfikatora zespołu
                                                         .foregroundColor(.white)
                                                         .font(.system(size: 12, weight: .regular, design: .default))
                                                 }
@@ -71,13 +75,13 @@ struct EventsView: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                                 .clipped()
                                                 HStack(spacing: 4) {
-                                                    Image("myImage")
-                                                        .renderingMode(.original)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(height: 20)
-                                                        .clipped()
-                                                    Text("TEST")
+                                                    if let logoURL = teamLogos[event.teams[1]] {
+                                                        KFImage(logoURL)
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .frame(width: 22, height: 22)
+                                                    }
+                                                    Text(getTeamName(for: event.teams[1])) // Użyj drugiego identyfikatora zespołu
                                                         .foregroundColor(.white)
                                                         .font(.system(size: 12, weight: .regular, design: .default))
                                                 }
@@ -88,12 +92,16 @@ struct EventsView: View {
                                             .frame(height: 60, alignment: .leading)
                                             .clipped()
                                             VStack {
-                                                Text("0")
-                                                    .foregroundColor(.white)
-                                                    .padding(5)
-                                                Text("0")
-                                                    .foregroundColor(.white)
-                                                    .padding(5)
+                                                if !event.main_results.isEmpty {
+                                                    Text(event.main_results[0])
+                                                        .foregroundColor(.white)
+                                                        .padding(5)
+                                                }
+                                                if !event.main_results.isEmpty {
+                                                    Text(event.main_results[1])
+                                                        .foregroundColor(.white)
+                                                        .padding(5)
+                                                }
                                             }
                                             .frame(height: 60, alignment: .center)
                                             .clipped()
@@ -103,18 +111,72 @@ struct EventsView: View {
                                 }
                             }
                         }
+                        .padding(.horizontal, 10)
+                        .background(Color(red: 0.09, green: 0.09, blue: 0.09))
+                        .cornerRadius(15)
                     }
                 }
+                
+                
+                
                 .onAppear {
                     eventsAPICall.getEvents()
-                }
+                    fetchTeamData()
                 }
             }
         }
+        
+    }
+    
+    // Funkcja do pobierania danych zespołów (nazwy i logotypy) na podstawie identyfikatorów zespołów
+    func fetchTeamData() {
+        let pageSize = 10 // Liczba zespołów pobieranych na jednej stronie
+        var currentPage = 1 // Numer aktualnej strony
+        var allTeams: [Teams] = [] // Tablica przechowująca wszystkie zespoły
+        
+        func fetchPage() {
+            guard let url = URL(string: "https://amatorkamp.pl/wp-json/sportspress/v2/teams?page=\(currentPage)&per_page=\(pageSize)") else {
+                return
+            }
+            
+            let task: URLSessionDataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
+                guard let data = data, error == nil else {
+                    return
+                }
+                
+                do {
+                    let teams = try JSONDecoder().decode([Teams].self, from: data)
+                    allTeams.append(contentsOf: teams)
+                    
+                    if teams.count == pageSize {
+                        currentPage += 1
+                        fetchPage()
+                    } else {
+                        for team in allTeams {
+                            teamNames[team.id] = team.title.rendered
+                            if let logoURLString = team.acf?.team_logo,
+                               let logoURL = URL(string: logoURLString) {
+                                teamLogos[team.id] = logoURL
+                            }
+                        }
+                    }
+                } catch {
+                    print("Error decoding teams data: \(error)")
+                }
+            }
+            
+            task.resume()
+        }
+        
+        fetchPage() // Dodane wywołanie funkcji fetchPage()
     }
 
-
-
+    
+    // Funkcja zwracająca nazwę zespołu na podstawie identyfikatora zespołu
+    func getTeamName(for teamId: Int) -> String {
+        return teamNames[teamId] ?? ""
+    }
+}
 
 struct EventsView_Previews: PreviewProvider {
     static var previews: some View {

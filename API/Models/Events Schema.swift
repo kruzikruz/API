@@ -17,14 +17,15 @@ struct Events: Identifiable, Decodable {
     var format: String
     var day: String
     var teams: [Int]
-    var main_results: [Int]
+    var main_results: [String]
     
-    static var `default` : Events {
-        Events(id: 0, title: Title(rendered: ""), status: "", slug: "1", author: 1, featured_media: 1, format: "", day: "", teams: [0], main_results: [0])
+    static var `default`: Events {
+        Events(id: 0, title: Title(rendered: ""), status: "", slug: "1", author: 1, featured_media: 1, format: "", day: "", teams: [0], main_results: [])
     }
-    
     
     struct Title: Decodable {
         var rendered: String
     }
 }
+
+
