@@ -1,0 +1,648 @@
+[
+    {
+        "id": 2800,
+        "date": "2022-05-27T20:36:20",
+        "date_gmt": "2022-05-27T18:36:20",
+        "guid": {
+            "rendered": "https://amatorkamp.pl/?post_type=sp_table&#038;p=2800"
+        },
+        "modified": "2022-08-24T18:03:55",
+        "modified_gmt": "2022-08-24T16:03:55",
+        "slug": "klasa-a-pomorska-grupa-malbork-iv",
+        "status": "publish",
+        "type": "sp_table",
+        "link": "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/",
+        "title": {
+            "rendered": "Klasa A &#8211; pomorska &#8211; grupa Malbork IV"
+        },
+        "content": {
+            "rendered": "",
+            "protected": false
+        },
+        "featured_media": 0,
+        "menu_order": 0,
+        "template": "",
+        "leagues": [
+            116
+        ],
+        "seasons": [
+            117
+        ],
+        "data": {
+            "3216": {
+                "p": "25",
+                "w": "20",
+                "d": "1",
+                "l": "4",
+                "f": "75",
+                "a": "29",
+                "gd": "46",
+                "pts": "61",
+                "name": "Rodło Kwidzyn",
+                "pos": 1
+            },
+            "3220": {
+                "p": "26",
+                "w": "18",
+                "d": "2",
+                "l": "6",
+                "f": "86",
+                "a": "47",
+                "gd": "39",
+                "pts": "56",
+                "name": "Błękitni Stare Miasto",
+                "pos": 2
+            },
+            "3217": {
+                "p": "25",
+                "w": "16",
+                "d": "4",
+                "l": "5",
+                "f": "72",
+                "a": "26",
+                "gd": "46",
+                "pts": "52",
+                "name": "Mady Ostaszewo",
+                "pos": 3
+            },
+            "3231": {
+                "p": "25",
+                "w": "14",
+                "d": "2",
+                "l": "9",
+                "f": "71",
+                "a": "41",
+                "gd": "30",
+                "pts": "44",
+                "name": "Błyskawica Postolin",
+                "pos": 4
+            },
+            "3248": {
+                "p": "25",
+                "w": "12",
+                "d": "5",
+                "l": "8",
+                "f": "60",
+                "a": "44",
+                "gd": "16",
+                "pts": "41",
+                "name": "Błękitni Kmiecin",
+                "pos": 5
+            },
+            "3242": {
+                "p": "25",
+                "w": "12",
+                "d": "2",
+                "l": "11",
+                "f": "77",
+                "a": "57",
+                "gd": "20",
+                "pts": "38",
+                "name": "Gryf Tczew KP",
+                "pos": 6
+            },
+            "1388": {
+                "p": "25",
+                "w": "11",
+                "d": "5",
+                "l": "9",
+                "f": "79",
+                "a": "72",
+                "gd": "7",
+                "pts": "38",
+                "name": "Rodło Trzciano",
+                "pos": 7
+            },
+            "33": {
+                "p": "25",
+                "w": "11",
+                "d": "5",
+                "l": "9",
+                "f": "49",
+                "a": "50",
+                "gd": "-1",
+                "pts": "38",
+                "name": "Amatorka Mikołajki Pomorskie",
+                "pos": 8
+            },
+            "3221": {
+                "p": "25",
+                "w": "10",
+                "d": "5",
+                "l": "10",
+                "f": "46",
+                "a": "52",
+                "gd": "-6",
+                "pts": "35",
+                "name": "LKS Waplewo",
+                "pos": 9
+            },
+            "3223": {
+                "p": "25",
+                "w": "9",
+                "d": "0",
+                "l": "16",
+                "f": "52",
+                "a": "95",
+                "gd": "-43",
+                "pts": "27",
+                "name": "Mewa Gniew",
+                "pos": 10
+            },
+            "3215": {
+                "p": "26",
+                "w": "5",
+                "d": "9",
+                "l": "12",
+                "f": "48",
+                "a": "55",
+                "gd": "-7",
+                "pts": "24",
+                "name": "Lisovia Lisewo",
+                "pos": 11
+            },
+            "3222": {
+                "p": "25",
+                "w": "6",
+                "d": "6",
+                "l": "13",
+                "f": "51",
+                "a": "74",
+                "gd": "-23",
+                "pts": "24",
+                "name": "Relax Ryjewo",
+                "pos": 12
+            },
+            "3241": {
+                "p": "25",
+                "w": "4",
+                "d": "1",
+                "l": "20",
+                "f": "27",
+                "a": "80",
+                "gd": "-53",
+                "pts": "13",
+                "name": "WKS Lignowy Szlacheckie",
+                "pos": 13
+            },
+            "3224": {
+                "p": "25",
+                "w": "2",
+                "d": "5",
+                "l": "18",
+                "f": "31",
+                "a": "102",
+                "gd": "-71",
+                "pts": "11",
+                "name": "Świt Radostowo",
+                "pos": 14
+            },
+            "0": {
+                "pos": "Pozycja",
+                "name": "Klub",
+                "p": "M",
+                "w": "W",
+                "d": "R",
+                "l": "P",
+                "f": "BZ",
+                "a": "BS",
+                "gd": "RB",
+                "pts": "Pkt"
+            }
+        },
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Klasa A - pomorska - grupa Malbork IV - Amatorka Mikołajki Pomorskie</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/\" />\n<meta property=\"og:locale\" content=\"pl_PL\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Klasa A - pomorska - grupa Malbork IV - Amatorka Mikołajki Pomorskie\" />\n<meta property=\"og:url\" content=\"https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/\" />\n<meta property=\"og:site_name\" content=\"Amatorka Mikołajki Pomorskie\" />\n<meta property=\"article:modified_time\" content=\"2022-08-24T16:03:55+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/\",\"url\":\"https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/\",\"name\":\"Klasa A - pomorska - grupa Malbork IV - Amatorka Mikołajki Pomorskie\",\"isPartOf\":{\"@id\":\"https://amatorkamp.pl/#website\"},\"datePublished\":\"2022-05-27T18:36:20+00:00\",\"dateModified\":\"2022-08-24T16:03:55+00:00\",\"breadcrumb\":{\"@id\":\"https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/#breadcrumb\"},\"inLanguage\":\"pl-PL\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Strona główna\",\"item\":\"https://amatorkamp.pl/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Klasa A &#8211; pomorska &#8211; grupa Malbork IV\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://amatorkamp.pl/#website\",\"url\":\"https://amatorkamp.pl/\",\"name\":\"Amatorka Mikołajki Pomorskie\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://amatorkamp.pl/?s={search_term_string}\"},\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pl-PL\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Klasa A - pomorska - grupa Malbork IV - Amatorka Mikołajki Pomorskie",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/",
+            "og_locale": "pl_PL",
+            "og_type": "article",
+            "og_title": "Klasa A - pomorska - grupa Malbork IV - Amatorka Mikołajki Pomorskie",
+            "og_url": "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/",
+            "og_site_name": "Amatorka Mikołajki Pomorskie",
+            "article_modified_time": "2022-08-24T16:03:55+00:00",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/",
+                        "url": "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/",
+                        "name": "Klasa A - pomorska - grupa Malbork IV - Amatorka Mikołajki Pomorskie",
+                        "isPartOf": {
+                            "@id": "https://amatorkamp.pl/#website"
+                        },
+                        "datePublished": "2022-05-27T18:36:20+00:00",
+                        "dateModified": "2022-08-24T16:03:55+00:00",
+                        "breadcrumb": {
+                            "@id": "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/#breadcrumb"
+                        },
+                        "inLanguage": "pl-PL",
+                        "potentialAction": [
+                            {
+                                "@type": "ReadAction",
+                                "target": [
+                                    "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://amatorkamp.pl/table/klasa-a-pomorska-grupa-malbork-iv/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Strona główna",
+                                "item": "https://amatorkamp.pl/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Klasa A &#8211; pomorska &#8211; grupa Malbork IV"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://amatorkamp.pl/#website",
+                        "url": "https://amatorkamp.pl/",
+                        "name": "Amatorka Mikołajki Pomorskie",
+                        "description": "",
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https://amatorkamp.pl/?s={search_term_string}"
+                                },
+                                "query-input": "required name=search_term_string"
+                            }
+                        ],
+                        "inLanguage": "pl-PL"
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/tables/2800"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/tables"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/types/sp_table"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/media?parent=2800"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "sp_league",
+                    "embeddable": true,
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/leagues?post=2800"
+                },
+                {
+                    "taxonomy": "sp_season",
+                    "embeddable": true,
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/seasons?post=2800"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    },
+    {
+        "id": 1384,
+        "date": "2021-08-01T00:01:39",
+        "date_gmt": "2021-07-31T22:01:39",
+        "guid": {
+            "rendered": "https://amatorkamp.pl/?post_type=sp_table&#038;p=1384"
+        },
+        "modified": "2022-07-16T16:35:35",
+        "modified_gmt": "2022-07-16T14:35:35",
+        "slug": "klasa-b-pomorska-grupa-malbork-vi",
+        "status": "publish",
+        "type": "sp_table",
+        "link": "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/",
+        "title": {
+            "rendered": "Klasa B &#8211; pomorska &#8211; grupa Malbork VI"
+        },
+        "content": {
+            "rendered": "",
+            "protected": false
+        },
+        "featured_media": 0,
+        "menu_order": 0,
+        "template": "",
+        "leagues": [
+            86
+        ],
+        "seasons": [
+            89
+        ],
+        "data": {
+            "1388": {
+                "p": "22",
+                "w": "17",
+                "d": "2",
+                "l": "3",
+                "f": "98",
+                "a": "44",
+                "gd": "54",
+                "pts": "53",
+                "name": "Rodło Trzciano",
+                "pos": 1
+            },
+            "33": {
+                "p": "22",
+                "w": "16",
+                "d": "3",
+                "l": "3",
+                "f": "82",
+                "a": "34",
+                "gd": "48",
+                "pts": "51",
+                "name": "Amatorka Mikołajki Pomorskie",
+                "pos": 2
+            },
+            "1387": {
+                "p": "22",
+                "w": "14",
+                "d": "4",
+                "l": "4",
+                "f": "54",
+                "a": "38",
+                "gd": "16",
+                "pts": "46",
+                "name": "GKS Straszewo",
+                "pos": 3
+            },
+            "1390": {
+                "p": "22",
+                "w": "12",
+                "d": "3",
+                "l": "7",
+                "f": "50",
+                "a": "29",
+                "gd": "21",
+                "pts": "39",
+                "name": "GKS Gardeja",
+                "pos": 4
+            },
+            "1392": {
+                "p": "22",
+                "w": "10",
+                "d": "3",
+                "l": "9",
+                "f": "66",
+                "a": "52",
+                "gd": "14",
+                "pts": "33",
+                "name": "Pogoń Smętowo",
+                "pos": 5
+            },
+            "1396": {
+                "p": "22",
+                "w": "9",
+                "d": "2",
+                "l": "11",
+                "f": "36",
+                "a": "51",
+                "gd": "-15",
+                "pts": "29",
+                "name": "Powiśle Czernin",
+                "pos": 6
+            },
+            "1391": {
+                "p": "22",
+                "w": "8",
+                "d": "4",
+                "l": "10",
+                "f": "54",
+                "a": "48",
+                "gd": "6",
+                "pts": "28",
+                "name": "Powiśle Stary Targ",
+                "pos": 7
+            },
+            "1389": {
+                "p": "22",
+                "w": "7",
+                "d": "5",
+                "l": "10",
+                "f": "33",
+                "a": "38",
+                "gd": "-5",
+                "pts": "26",
+                "name": "Pomorzanka Skórcz",
+                "pos": 8
+            },
+            "1394": {
+                "p": "22",
+                "w": "7",
+                "d": "1",
+                "l": "14",
+                "f": "36",
+                "a": "68",
+                "gd": "-32",
+                "pts": "22",
+                "name": "Szpak Skórcz",
+                "pos": 9
+            },
+            "1393": {
+                "p": "22",
+                "w": "5",
+                "d": "6",
+                "l": "11",
+                "f": "34",
+                "a": "67",
+                "gd": "-33",
+                "pts": "21",
+                "name": "KP Wandowo",
+                "pos": 10
+            },
+            "1399": {
+                "p": "22",
+                "w": "5",
+                "d": "2",
+                "l": "15",
+                "f": "44",
+                "a": "73",
+                "gd": "-29",
+                "pts": "17",
+                "name": "Powiśle Pawlice-Rakowiec",
+                "pos": 11
+            },
+            "1398": {
+                "p": "22",
+                "w": "4",
+                "d": "1",
+                "l": "17",
+                "f": "31",
+                "a": "76",
+                "gd": "-45",
+                "pts": "13",
+                "name": "Orliki Stary Dzierzgoń",
+                "pos": 12
+            },
+            "0": {
+                "pos": "Pozycja",
+                "name": "Klub",
+                "p": "M",
+                "w": "W",
+                "d": "R",
+                "l": "P",
+                "f": "BZ",
+                "a": "BS",
+                "gd": "RB",
+                "pts": "Pkt"
+            }
+        },
+        "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Klasa B - pomorska - grupa Malbork VI - Amatorka Mikołajki Pomorskie</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/\" />\n<meta property=\"og:locale\" content=\"pl_PL\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Klasa B - pomorska - grupa Malbork VI - Amatorka Mikołajki Pomorskie\" />\n<meta property=\"og:url\" content=\"https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/\" />\n<meta property=\"og:site_name\" content=\"Amatorka Mikołajki Pomorskie\" />\n<meta property=\"article:modified_time\" content=\"2022-07-16T14:35:35+00:00\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/\",\"url\":\"https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/\",\"name\":\"Klasa B - pomorska - grupa Malbork VI - Amatorka Mikołajki Pomorskie\",\"isPartOf\":{\"@id\":\"https://amatorkamp.pl/#website\"},\"datePublished\":\"2021-07-31T22:01:39+00:00\",\"dateModified\":\"2022-07-16T14:35:35+00:00\",\"breadcrumb\":{\"@id\":\"https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/#breadcrumb\"},\"inLanguage\":\"pl-PL\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Strona główna\",\"item\":\"https://amatorkamp.pl/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Klasa B &#8211; pomorska &#8211; grupa Malbork VI\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://amatorkamp.pl/#website\",\"url\":\"https://amatorkamp.pl/\",\"name\":\"Amatorka Mikołajki Pomorskie\",\"description\":\"\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://amatorkamp.pl/?s={search_term_string}\"},\"query-input\":\"required name=search_term_string\"}],\"inLanguage\":\"pl-PL\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+        "yoast_head_json": {
+            "title": "Klasa B - pomorska - grupa Malbork VI - Amatorka Mikołajki Pomorskie",
+            "robots": {
+                "index": "index",
+                "follow": "follow",
+                "max-snippet": "max-snippet:-1",
+                "max-image-preview": "max-image-preview:large",
+                "max-video-preview": "max-video-preview:-1"
+            },
+            "canonical": "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/",
+            "og_locale": "pl_PL",
+            "og_type": "article",
+            "og_title": "Klasa B - pomorska - grupa Malbork VI - Amatorka Mikołajki Pomorskie",
+            "og_url": "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/",
+            "og_site_name": "Amatorka Mikołajki Pomorskie",
+            "article_modified_time": "2022-07-16T14:35:35+00:00",
+            "twitter_card": "summary_large_image",
+            "schema": {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/",
+                        "url": "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/",
+                        "name": "Klasa B - pomorska - grupa Malbork VI - Amatorka Mikołajki Pomorskie",
+                        "isPartOf": {
+                            "@id": "https://amatorkamp.pl/#website"
+                        },
+                        "datePublished": "2021-07-31T22:01:39+00:00",
+                        "dateModified": "2022-07-16T14:35:35+00:00",
+                        "breadcrumb": {
+                            "@id": "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/#breadcrumb"
+                        },
+                        "inLanguage": "pl-PL",
+                        "potentialAction": [
+                            {
+                                "@type": "ReadAction",
+                                "target": [
+                                    "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://amatorkamp.pl/table/klasa-b-pomorska-grupa-malbork-vi/#breadcrumb",
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "Strona główna",
+                                "item": "https://amatorkamp.pl/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "Klasa B &#8211; pomorska &#8211; grupa Malbork VI"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://amatorkamp.pl/#website",
+                        "url": "https://amatorkamp.pl/",
+                        "name": "Amatorka Mikołajki Pomorskie",
+                        "description": "",
+                        "potentialAction": [
+                            {
+                                "@type": "SearchAction",
+                                "target": {
+                                    "@type": "EntryPoint",
+                                    "urlTemplate": "https://amatorkamp.pl/?s={search_term_string}"
+                                },
+                                "query-input": "required name=search_term_string"
+                            }
+                        ],
+                        "inLanguage": "pl-PL"
+                    }
+                ]
+            }
+        },
+        "_links": {
+            "self": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/tables/1384"
+                }
+            ],
+            "collection": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/tables"
+                }
+            ],
+            "about": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/types/sp_table"
+                }
+            ],
+            "wp:attachment": [
+                {
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/media?parent=1384"
+                }
+            ],
+            "wp:term": [
+                {
+                    "taxonomy": "sp_league",
+                    "embeddable": true,
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/leagues?post=1384"
+                },
+                {
+                    "taxonomy": "sp_season",
+                    "embeddable": true,
+                    "href": "https://amatorkamp.pl/wp-json/wp/v2/seasons?post=1384"
+                }
+            ],
+            "curies": [
+                {
+                    "name": "wp",
+                    "href": "https://api.w.org/{rel}",
+                    "templated": true
+                }
+            ]
+        }
+    }
+]
