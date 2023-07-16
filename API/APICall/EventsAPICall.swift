@@ -2,7 +2,6 @@ import SwiftUI
 
 class EventsAPICall: ObservableObject {
     @Published var events: [Events] = []
-    
     // MARK: - Events
     
     func getEvents() {

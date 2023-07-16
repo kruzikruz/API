@@ -1,14 +1,14 @@
 import SwiftUI
 import Kingfisher
 
-
 struct NavigationBar2: View {
     var body: some View {
         VStack {
             HStack {
-                Image("livescore")
-                    .resizable()
-                    .frame(width: 120, height: 20)
+                KFImage(URL(string: "https://amatorkamp.pl/wp-content/uploads/2022/03/logo@2x-260x300.png"))
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 35, height: 35)
                 Spacer()
                 HStack(spacing: 16) {
                     Button {
@@ -35,39 +35,83 @@ struct NavigationBar2: View {
     }
 }
 
+extension TeamsAPICall {
+    // Funkcja zwracająca nazwę zespołu na podstawie identyfikatora zespołu
+    func getTeamName3(for teamId: Int) -> String {
+        if let team = teams.first(where: { $0.id == teamId }) {
+            return team.title.rendered
+        } else {
+            return ""
+        }
+    }
+    
+    // Extension returning the image URL based on the team identifier
+    func getTeamImageURL(for teamId: Int) -> String? {
+        if let team = teams.first(where: { $0.id == teamId }) {
+            if let ogImage = team.yoast_head_json.og_image.first {
+                return ogImage.url
+            }
+        }
+        return nil
+    }
+}
+
+
 struct EventsView: View {
     @EnvironmentObject var eventsAPICall: EventsAPICall
-    @Environment(\.colorScheme) var colorScheme
-    @State private var teamNames: [Int: String] = [:] // Zaktualizowana tablica przechowująca nazwy zespołów
-    @State private var teamLogos: [Int: URL] = [:] // Zaktualizowana tablica przechowująca adresy URL logotypów zespołów
+    @EnvironmentObject var teamsAPICall: TeamsAPICall
+    //@State private var teams: [Teams] = [] // Dodaj stan dla kolekcji obiektów Teams
+    //@Environment(\.colorScheme) var colorScheme
+    
+    // Metoda do tworzenia deep linka na podstawie identyfikatora wydarzenia
+    func createDetailEventDeepLink(eventID: Int) -> URL? {
+        let deepLinkURLString = "yourappname://detailevent?eventID=\(eventID)"
+        return URL(string: deepLinkURLString)
+    }
+    
     
     var body: some View {
         NavigationView {
             VStack {
-                NavigationBar2()
+                NavBar()
                 ScrollView(showsIndicators: false) {
                     VStack {
-                        ForEach(eventsAPICall.events, id: \.id) { event in
+                        ForEach(eventsAPICall.events.filter { $0.seasons == [135] }, id: \.id) { event in
                             NavigationLink(destination: DetailEvents(event: event)) {
                                 ZStack(alignment: .bottom) {
                                     VStack(spacing: 0) {
                                         HStack(spacing: 0) {
                                             VStack {
-                                                Text(event.day)
-                                                    .foregroundColor(.white)
-                                                    .font(.system(size: 8))
+                                                if event.main_results.isEmpty {
+                                                            Text(formatDateShort(event.date))
+                                                                .foregroundColor(.white)
+                                                                .font(.system(size: 12))
+                                                                .padding(.trailing, 12)
+                                                        } else {
+                                                            Text("FT")
+                                                                .foregroundColor(.white)
+                                                                .font(.system(size: 12))
+                                                                .padding(.trailing, 12)
+                                                        }
+                                                    
                                             }
                                             .clipped()
                                             .padding(5)
                                             VStack(alignment: .trailing) {
                                                 HStack(spacing: 4) {
-                                                    if let logoURL = teamLogos[event.teams[0]] {
-                                                        KFImage(logoURL)
+                                                    if let imageURL = teamsAPICall.getTeamImageURL(for: event.teams[0]) {
+                                                        KFImage(URL(string: imageURL))
                                                             .resizable()
                                                             .aspectRatio(contentMode: .fit)
-                                                            .frame(width: 22, height: 22)
+                                                            .frame(width: 25, height: 25)
+                                                    } else {
+                                                        Image("myImage")
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .frame(width: 25, height: 25)
                                                     }
-                                                    Text(getTeamName(for: event.teams[0])) // Użyj pierwszego identyfikatora zespołu
+                                                    Text(teamsAPICall.getTeamName3(for: event.teams[0]))
+                                                        .font(.custom("Source Sans Pro", size: 12))
                                                         .foregroundColor(.white)
                                                         .font(.system(size: 12, weight: .regular, design: .default))
                                                 }
@@ -75,13 +119,19 @@ struct EventsView: View {
                                                 .frame(maxWidth: .infinity, alignment: .leading)
                                                 .clipped()
                                                 HStack(spacing: 4) {
-                                                    if let logoURL = teamLogos[event.teams[1]] {
-                                                        KFImage(logoURL)
+                                                    if let imageURL = teamsAPICall.getTeamImageURL(for: event.teams[1]) {
+                                                        KFImage(URL(string: imageURL))
                                                             .resizable()
                                                             .aspectRatio(contentMode: .fit)
-                                                            .frame(width: 22, height: 22)
+                                                            .frame(width: 25, height: 25)
+                                                    } else {
+                                                        Image("myImage")
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .frame(width: 25, height: 25)
                                                     }
-                                                    Text(getTeamName(for: event.teams[1])) // Użyj drugiego identyfikatora zespołu
+                                                    Text(teamsAPICall.getTeamName3(for: event.teams[1]))
+                                                        .font(.custom("Source Sans Pro", size: 12))
                                                         .foregroundColor(.white)
                                                         .font(.system(size: 12, weight: .regular, design: .default))
                                                 }
@@ -92,19 +142,25 @@ struct EventsView: View {
                                             .frame(height: 60, alignment: .leading)
                                             .clipped()
                                             VStack {
-                                                if !event.main_results.isEmpty {
+                                                if event.main_results.isEmpty {
+                                                    Text(formatTime(event.date))
+                                                        .foregroundColor(.white)
+                                                        .padding(5)
+                                                } else {
                                                     Text(event.main_results[0])
                                                         .foregroundColor(.white)
                                                         .padding(5)
-                                                }
-                                                if !event.main_results.isEmpty {
-                                                    Text(event.main_results[1])
-                                                        .foregroundColor(.white)
-                                                        .padding(5)
+                                                    
+                                                    if event.main_results.count > 1 {
+                                                        Text(event.main_results[1])
+                                                            .foregroundColor(.white)
+                                                            .padding(5)
+                                                    }
                                                 }
                                             }
                                             .frame(height: 60, alignment: .center)
                                             .clipped()
+
                                         }
                                     }
                                     .padding(10)
@@ -116,70 +172,59 @@ struct EventsView: View {
                         .cornerRadius(15)
                     }
                 }
-                
-                
-                
                 .onAppear {
                     eventsAPICall.getEvents()
-                    fetchTeamData()
+                    teamsAPICall.getTeams()
                 }
             }
+            .background(
+                LinearGradient(
+                    gradient: Gradient(
+                        colors: [
+                            Color(red: 30/255, green: 30/255, blue: 30/255),
+                            Color(red: 46/255, green: 46/255, blue: 46/255)
+                        ]
+                    ),
+                    startPoint: .leading,
+                    endPoint: .trailing
+                )
+                .edgesIgnoringSafeArea(.all)
+            )
+            .navigationBarHidden(true)
         }
-        
+        .background(
+            LinearGradient(
+                gradient: Gradient(
+                    colors: [
+                        Color(red: 30/255, green: 30/255, blue: 30/255),
+                        Color(red: 46/255, green: 46/255, blue: 46/255)
+                    ]
+                ),
+                startPoint: .leading,
+                endPoint: .trailing
+            )
+            .edgesIgnoringSafeArea(.all)
+        )
+        .navigationBarHidden(true)
     }
-    
-    // Funkcja do pobierania danych zespołów (nazwy i logotypy) na podstawie identyfikatorów zespołów
-    func fetchTeamData() {
-        let pageSize = 10 // Liczba zespołów pobieranych na jednej stronie
-        var currentPage = 1 // Numer aktualnej strony
-        var allTeams: [Teams] = [] // Tablica przechowująca wszystkie zespoły
-        
-        func fetchPage() {
-            guard let url = URL(string: "https://amatorkamp.pl/wp-json/sportspress/v2/teams?page=\(currentPage)&per_page=\(pageSize)") else {
-                return
-            }
-            
-            let task: URLSessionDataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
-                guard let data = data, error == nil else {
-                    return
-                }
-                
-                do {
-                    let teams = try JSONDecoder().decode([Teams].self, from: data)
-                    allTeams.append(contentsOf: teams)
-                    
-                    if teams.count == pageSize {
-                        currentPage += 1
-                        fetchPage()
-                    } else {
-                        for team in allTeams {
-                            teamNames[team.id] = team.title.rendered
-                            if let logoURLString = team.acf?.team_logo,
-                               let logoURL = URL(string: logoURLString) {
-                                teamLogos[team.id] = logoURL
-                            }
-                        }
-                    }
-                } catch {
-                    print("Error decoding teams data: \(error)")
-                }
-            }
-            
-            task.resume()
-        }
-        
-        fetchPage() // Dodane wywołanie funkcji fetchPage()
-    }
+}
 
+func formatDateShort(_ dateString: String) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
     
-    // Funkcja zwracająca nazwę zespołu na podstawie identyfikatora zespołu
-    func getTeamName(for teamId: Int) -> String {
-        return teamNames[teamId] ?? ""
+    if let date = dateFormatter.date(from: dateString) {
+        dateFormatter.dateFormat = "dd/MM"
+        return dateFormatter.string(from: date)
+    } else {
+        return "Invalid Date"
     }
 }
 
 struct EventsView_Previews: PreviewProvider {
     static var previews: some View {
-        EventsView().environmentObject(EventsAPICall())
+        EventsView()
+            .environmentObject(EventsAPICall())
+            .environmentObject(TeamsAPICall())
     }
 }

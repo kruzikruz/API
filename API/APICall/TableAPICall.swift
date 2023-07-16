@@ -13,7 +13,7 @@ class TableAPICall: ObservableObject {
     // MARK: - Events
     
     func getTable() {
-        guard let url = URL(string: "https://amatorkamp.pl/wp-json/sportspress/v2/tables/2800") else { fatalError("Missing URL") }
+        guard let url = URL(string: "https://amatorkamp.pl/wp-json/sportspress/v2/tables") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
 
