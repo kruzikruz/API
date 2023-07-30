@@ -167,6 +167,7 @@ struct EventsView: View {
                                 }
                             }
                         }
+                        .frame(width: 340)
                         .padding(.horizontal, 10)
                         .background(Color(red: 0.09, green: 0.09, blue: 0.09))
                         .cornerRadius(15)

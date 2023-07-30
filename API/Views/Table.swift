@@ -45,7 +45,7 @@ struct TableView: View {
                                     }
                                     
                                     ForEach(sortedData.filter { $0.value.pos != "Pozycja" }, id: \.key) { datum in
-                                        NavigationLink(destination: DetailTable(table: Table.default, safeArea: safeArea, size: size)
+                                        NavigationLink(destination: DetailTable(table: table,safeArea: safeArea, size: size, selectedRowID: datum.key, selectedDatum: datum.value)
                                             .ignoresSafeArea(.container, edges: .top)) {
                                             HStack {
                                                 TableCellView(text: datum.value.pos, width: 50)

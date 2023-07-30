@@ -19,9 +19,9 @@ struct Teams: Identifiable, Decodable {
     let content: ContentText
     let yoast_head: String
     let yoast_head_json: YoastHeadJSON
-    
+    let bacgroundimage_url: String
     static var `default`: Teams {
-        Teams(id: 0, date: "2022-12-18T16:45:09", slug: "1", status: "", type: "", link: "", title: TeamName(rendered: ""), content: ContentText(rendered: ""), yoast_head: "", yoast_head_json: YoastHeadJSON(title: "", robots: [:], canonical: "", og_locale: "", og_type: "", og_image: []))
+        Teams(id: 0, date: "2022-12-18T16:45:09", slug: "1", status: "", type: "", link: "", title: TeamName(rendered: ""), content: ContentText(rendered: ""), yoast_head: "", yoast_head_json: YoastHeadJSON(title: "", robots: [:], canonical: "", og_locale: "", og_type: "", og_image: []), bacgroundimage_url: "Artwork")
     }
     
     struct TeamName: Codable {
