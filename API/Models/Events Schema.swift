@@ -32,3 +32,12 @@ struct Events: Identifiable, Decodable {
 }
 
 
+extension Events: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: Events, rhs: Events) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

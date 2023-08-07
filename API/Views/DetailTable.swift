@@ -11,6 +11,8 @@ import ACarousel
 
 struct DetailTable: View {
     
+    
+    
     let table: Table
     var safeArea: EdgeInsets
     var size: CGSize
@@ -44,7 +46,7 @@ struct DetailTable: View {
         }
         return team.bacgroundimage_url
     }
-    
+        
 
     var body: some View {
         if dataLoaded {
@@ -66,9 +68,9 @@ struct DetailTable: View {
                     VStack(alignment: .center, spacing: 14) {
                         HStack {
                             Text("Tabela")
-                                .font(.custom("Poppins", size: 14))
-                                .tracking(0.26)
-                                .lineSpacing(24.53)
+                                .font(.custom("Poppins", size: 13))
+                                .kerning(0.23504)
+                                .multilineTextAlignment(.center)
                                 .foregroundColor(.white)
                             
                             Spacer()
@@ -76,7 +78,7 @@ struct DetailTable: View {
                             Button(action: {
                                 // Akcja, która zostanie wykonana po kliknięciu przycisku
                             }) {
-                                Text("Zobacz wszystko")
+                                Text("Zobacz całą tabele")
                                     .font(.custom("Poppins", size: 12))
                                     .kerning(0.26283)
                                     .multilineTextAlignment(.center)
@@ -84,6 +86,125 @@ struct DetailTable: View {
                             }
                         }
                         .frame(width: 310, height: 31.5391)
+                        HStack {
+                            Text("Drużyna")
+                                .font(.custom("Poppins", size: 10))
+                                .kerning(0.23504)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                            
+                            Spacer()
+                            Text("M")
+                                .font(.custom("Poppins", size: 10))
+                                .kerning(0.26283)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .frame(width: 15)
+                            Text("Z")
+                                .font(.custom("Poppins", size: 10))
+                                .kerning(0.26283)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .frame(width: 15)
+                            Text("R")
+                                .font(.custom("Poppins", size: 10))
+                                .kerning(0.26283)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .frame(width: 15)
+                            Text("P")
+                                .font(.custom("Poppins", size: 10))
+                                .kerning(0.26283)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .frame(width: 15)
+                            Text("RB")
+                                .font(.custom("Poppins", size: 10))
+                                .kerning(0.26283)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .frame(width: 15)
+                            Text("Pkt")
+                                .font(.custom("Poppins", size: 10))
+                                .kerning(0.26283)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .frame(width: 20)
+                        }
+                        .frame(width: 310, height: 10)
+                        ForEach(tableAPICall.table.filter { $0.id == 6514 }, id: \.id)  { table in
+                            
+                            let sortedData = table.data.sorted { (entry1, entry2) in
+                                if let pos1 = convertToInteger(entry1.value.pos), let pos2 = convertToInteger(entry2.value.pos) {
+                                    return pos1 < pos2
+                                } else {
+                                    return entry1.value.pos < entry2.value.pos
+                                }
+                            }
+                            
+                            ForEach(sortedData.filter { $0.value.pos != "Pozycja" }.prefix(5), id: \.key) { datum in
+                                
+                                HStack {
+                                    Text(datum.value.pos)
+                                        .font(.custom("Poppins", size: 12).weight(.medium))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .frame(width: 12)
+                                    HStack { // Utworzono VStack, aby zawrzeć obrazek i tekst w jednej kolumnie
+                                        if let teamIDString = datum.key,
+                                           let teamID = Int(teamIDString),
+                                           let imageURL = teamsAPICall.getTeamImageURL(for: teamID) {
+                                            KFImage(URL(string: imageURL))
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 18, height: 18)
+                                        } else {
+                                            Image("myImage")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 18, height: 18)
+                                        }
+                                    }
+                                    Text(datum.value.name)
+                                        .font(.custom("Poppins", size: 12))
+                                        .kerning(0.26283)
+                                        .foregroundColor(.white)
+                                    
+                                    Spacer()
+                                    Text(datum.value.p)
+                                        .font(.custom("Poppins", size: 12).weight(.medium))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .frame(width: 15)
+                                    Text(datum.value.w)
+                                        .font(.custom("Poppins", size: 12).weight(.medium))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .frame(width: 15)
+                                    Text(datum.value.d)
+                                        .font(.custom("Poppins", size: 12).weight(.medium))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .frame(width: 15)
+                                    Text(datum.value.l)
+                                        .font(.custom("Poppins", size: 12).weight(.medium))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .frame(width: 15)
+                                    Text(datum.value.gd)
+                                        .font(.custom("Poppins", size: 12).weight(.medium))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .frame(width: 15)
+                                    Text(datum.value.pts)
+                                        .font(.custom("Poppins", size: 12).weight(.medium))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .frame(width: 20)
+                                }
+                                .frame(width: 310, height: 25)
+                            }
+                        }
                     }
                     .padding(.horizontal)
                     .padding(.top, 14.01759)
@@ -92,17 +213,25 @@ struct DetailTable: View {
                     .background(Color(red: 0.13, green: 0.13, blue: 0.2))
                     .cornerRadius(7.88478)
                     //
-                    ACarousel(playersAPICall.players.prefix(5), id: \.id, spacing: 9,headspace: 9)  { player in
+                    
+                    ForEach(eventsAPICall.events.filter { $0.seasons == [135] && $0.teams.contains(Int(selectedRowID) ?? 0)}.prefix(1), id: \.id)  { event in
                         HStack(spacing: 20) {
                                 HStack(alignment: .center) {
                                     VStack{
                                         HStack(alignment: .center) {
                                             VStack(alignment: .center) {
-                                                Image("AMP")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fill)
-                                                    .frame(width: 30, height: 30)
-                                                Text("Nogat Malbork")
+                                                if let imageURL = teamsAPICall.getTeamImageURL(for: event.teams[0]) {
+                                                    KFImage(URL(string: imageURL))
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: 30, height: 30)
+                                                } else {
+                                                    Image("myImage")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: 30, height: 30)
+                                                }
+                                                Text(teamsAPICall.getTeamName3(for: event.teams[0]))
                                                     .font(
                                                         Font.custom("Poppins", size: 7)
                                                             .weight(.medium)
@@ -112,8 +241,8 @@ struct DetailTable: View {
                                                     .foregroundColor(.white)
                                                 HStack(spacing: 5) {
                                                     ForEach(0..<5) { index in
-                                                        Circle()
-                                                            .fill(.blue)
+                                                        RoundedRectangle(cornerRadius: 25)
+                                                            .fill(Color.red)
                                                             .frame(width: 10, height: 10)
                                                     }
                                                 }
@@ -121,32 +250,49 @@ struct DetailTable: View {
                                             .frame(width: 80)
                                             .padding()
                                             VStack(alignment: .center, spacing: 20) {
-                                                Text("20:00")
-                                                    .font(
-                                                        Font.custom("Poppins", size: 24)
-                                                            .weight(.medium)
-                                                    )
-                                                    .multilineTextAlignment(.center)
-                                                    .foregroundColor(.white)
-                                                Text("29 LIP")
-                                                    .font(
-                                                        Font.custom("Poppins", size: 7)
-                                                            .weight(.medium)
-                                                    )
-                                                    .multilineTextAlignment(.center)
-                                                    .foregroundColor(.white)
+                                                if event.main_results.isEmpty {
+                                                    Text(formatTime(event.date))
+                                                        .foregroundColor(.white)
+                                                        .padding(5)
+                                                } else {
+                                                    Text(event.main_results[0])
+                                                        .foregroundColor(.white)
+                                                        .padding(5)
+                                                    
+                                                    if event.main_results.count > 1 {
+                                                        Text(event.main_results[1])
+                                                            .foregroundColor(.white)
+                                                            .padding(5)
+                                                    }
+                                                }
+                                                if event.main_results.isEmpty {
+                                                            Text(formatDateShort(event.date))
+                                                                .foregroundColor(.white)
+                                                                .font(.system(size: 12))
+                                                                .padding(.trailing, 12)
+                                                        } else {
+                                                            Text("FT")
+                                                                .foregroundColor(.white)
+                                                                .font(.system(size: 12))
+                                                                .padding(.trailing, 12)
+                                                        }
+
                                             }
                                             .frame(width: 100) // Ustawienie alignment na .center oraz szerokości na 100
                                             
                                             VStack(alignment: .center) {
-                                                Image("AMP")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fill)
-                                                    .frame(width: 30, height: 30)
-                                                Circle()
-                                                    .fill(.blue)
-                                                    .frame(width: 10, height: 10)
-                                                Text("Amatorka Mikołajki Pomorskie")
+                                                if let imageURL = teamsAPICall.getTeamImageURL(for: event.teams[1]) {
+                                                    KFImage(URL(string: imageURL))
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: 30, height: 30)
+                                                } else {
+                                                    Image("myImage")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width: 30, height: 30)
+                                                }
+                                                Text(teamsAPICall.getTeamName3(for: event.teams[1]))
                                                     .font(
                                                         Font.custom("Poppins", size: 7)
                                                             .weight(.medium)
@@ -156,15 +302,13 @@ struct DetailTable: View {
                                                     .foregroundColor(.white)
                                                 //.lineLimit(nil)
                                                 HStack(spacing: 5) {
-                                                    Circle()
-                                                        .fill(.blue)
-                                                        .frame(width: 10, height: 10)
                                                     ForEach(0..<5) { index in
-                                                        Circle()
-                                                            .fill(.blue)
+                                                        RoundedRectangle(cornerRadius: 25)
+                                                            .fill(Color.red)
                                                             .frame(width: 10, height: 10)
                                                     }
                                                 }
+                                                .clipShape(Rectangle()) // Wycina cały HStack
                                             }
                                             .frame(width: 80)
                                             .padding()

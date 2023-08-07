@@ -42,7 +42,7 @@ struct ContentView: View {
                         Image(systemName: "newspaper.fill")
                         Text("News")
                     }
-                Refresh()
+                ContentViewAPI()
                     .tabItem() {
                         Image(systemName: "line.3.horizontal")
                         Text("Menu")
